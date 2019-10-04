@@ -8,7 +8,10 @@
  alias chrome='google-chrome'
  alias ipconfig='hostname -I'
  alias s="npm start"
-
+ function killport() {
+    sudo kill `sudo lsof -t -i:$1`
+ }
+ 
  #React Native
  alias a="npm run android"
  alias rnra='react-native run-android'
